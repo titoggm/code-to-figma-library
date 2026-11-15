@@ -2,26 +2,15 @@
 
 ![Code to Figma Component Library](images/code-to-figma-library.webp)
 
+<video src="images/code-to-figma-library.mp4" controls muted width="100%">
+  <a href="images/code-to-figma-library.mp4">Watch the demo</a>
+</video>
+
 **Your code is the source of truth. Figma is a copy.**
 
 This project copies your component library from code into Figma. Claude Code reads your components and Storybook, then builds matching components in an open Figma file. When the two differ, Figma is wrong and gets fixed.
 
 ## How It Works
-
-```mermaid
-flowchart LR
-    code["<b>Your code + Storybook</b><br/>components, props, stories"]
-    claude["<b>Claude Code</b><br/>plans, builds, compares"]
-    figma["<b>Figma file</b><br/>via Figma Console MCP"]
-
-    code -- "reads components and stories" --> claude
-    claude -- "builds components" --> figma
-    figma -- "returns built values" --> claude
-
-    classDef neutral stroke:#8b949e,stroke-width:1.5px
-    class code,claude,figma neutral
-    linkStyle default stroke:#8b949e,stroke-width:1.5px
-```
 
 1. **Plan.** Claude reads a component and proposes how it maps to Figma.
 2. **Approve.** You review the plan and answer any questions.
